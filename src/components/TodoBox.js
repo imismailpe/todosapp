@@ -2,11 +2,11 @@ import React from 'react';
 
 const TodoBox = (props) => {
     return (
-        <div className='todosBox'>
+        <div className='todosBox' onDragOver={props.onDragOver} onDrop={e => props.onDrop(e, props.status)} >
             <div className='todosBoxTitle'>{props.status}</div>
             <div className='todosBoxBody'>
                 {
-                    props.data.map(item => <div className='todoItemContainer' key={item.id} draggable='true'><div className='todoItem'>{item.text}</div></div>)
+                    props.data.map(item => <div onDragStart={e => props.onDragStart(e,item.id)} className='todoItem todoItemContainer_' key={item.id} draggable='true'><li className=''>{item.text}</li></div>)
                 }
             </div>
         </div>

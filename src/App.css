@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,54 @@
 .App-link {
   color: #61dafb;
 }
-
+.mainList{
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 300px;
+}
+li{
+	background-color: rgb(305,299,177);
+	border: 2px solid orange;
+	border-radius: 4px;
+	margin: 15px;
+	padding: 5px;
+}
+.todoboxContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px;
+  margin: 3px;
+}
+.todosBox{
+  border: 1px solid #282c34;
+  padding: 4px;
+  background-color: rgba(red, green, blue, 0.7);
+  display: grid;
+  grid-template-rows: 1.5em auto;
+  justify-content: start;
+  width: fit-content;
+  border-radius: 3px;
+}
+.todosBoxTitle{
+  grid-row: 1/2;
+  font-weight: 500;
+}
+.todosBoxBody{
+  grid-row: 2/3;
+}
+.todoItemContainer{
+  border: 1px solid #282c34;
+  padding: 2px;
+  margin: 1px;
+  text-align: left;
+}
+.ToDoToDo{
+	text-decoration: none;
+}
+.ToDoDone{
+	text-decoration: line-through;
+	color: red;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

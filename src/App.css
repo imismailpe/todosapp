@@ -30,7 +30,6 @@
 .mainList{
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 300px;
 }
 li{
 	background-color: rgb(305,299,177);

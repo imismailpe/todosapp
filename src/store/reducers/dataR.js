@@ -2,11 +2,7 @@ import { fromJS } from "immutable";
 import * as actions from "../actions/actionTypes";
 
 export const initialState = fromJS({
-    todosList: [
-        {text: 'test', status: 'Completed'},
-        {text: 'test2', status: ''},
-        {text: 'test3', status: 'Completed'},{text: 'test4', status: 'Abandoned'},{text: 'test5', status: 'Completed'}
-    ],
+    todosList: [],
     error: null
 });
 

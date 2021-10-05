@@ -6,7 +6,7 @@ const TodoBox = (props) => {
             <div className='todosBoxTitle'>{props.status}</div>
             <div className='todosBoxBody'>
                 {
-                    props.data.map(item => <div className='todoItemContainer'><div className='todoItem'>{item.text}</div></div>)
+                    props.data.map(item => <div className='todoItemContainer' key={item.id} draggable='true'><div className='todoItem'>{item.text}</div></div>)
                 }
             </div>
         </div>

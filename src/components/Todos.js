@@ -4,7 +4,7 @@ import TodoBox from './TodoBox';
 import { setTodos } from '../store/actions/actions';
 
 const ToDos = (props) => {
-    const statuses = ['Abandoned', 'Completed', 'InProgress'];
+    const statuses = ['Pending','Abandoned', 'Completed', 'InProgress'];
     const dispatch = useDispatch();
     const dataStore = useSelector(state => state.dataR.toJS());
     const [todosData, settodosData] = useState(dataStore.todosList);

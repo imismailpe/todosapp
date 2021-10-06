@@ -32,6 +32,10 @@ const ToDos = () => {
             setnewItemText('');
         }
     }
+    const handleDelete = (event, id) => {
+        const data = dataStore.todosList.filter(item => item.id !== id);
+        dispatch(setTodos(data));
+    }
     //identify the task being dragged
     const handleDragStart = (event, id) => {
         const item = dataStore.todosList.find(item => item.id === id);
@@ -93,7 +97,7 @@ const ToDos = () => {
             <hr />
             <ol className="mainList" id="todoList" onDrop={e => handleOnDrop(e, '')} onDragOver={handleDragOver}>Today's Tasks:
                 {
-                    (filterInput ? todosData : dataStore.todosList).filter(item => item.status === '').map(item => <div onDragStart={e => handleDragStart(e, item.id)} className='todoItemNew' key={item.id} draggable='true'><li className='hideOverflow'>{item.text}</li></div>)
+                    (filterInput ? todosData : dataStore.todosList).filter(item => item.status === '').map(item => <div onDragStart={e => handleDragStart(e, item.id)} className='todoItemNew' key={item.id} draggable='true'><span onClick={e => handleDelete(e, item.id)} className='deletetodo'>x</span><li className='hideOverflow'>{item.text}</li></div>)
                 }
             </ol>
             <hr />
@@ -101,7 +105,7 @@ const ToDos = () => {
                 {
                     statuses.map(status => {
                         const data = filterInput ? todosData.filter(item => item.status === status) : dataStore.todosList.filter(item => item.status === status);
-                        return <TodoBox onDrop={handleOnDrop} onDragOver={handleDragOver} onDragStart={handleDragStart} key={status} status={status} data={data} bgColor={getBGColor(status)} />
+                        return <TodoBox onDrop={handleOnDrop} onDragOver={handleDragOver} onDragStart={handleDragStart} onDelete={handleDelete} key={status} status={status} data={data} bgColor={getBGColor(status)} />
                     })
                 }
             </div>

@@ -120,9 +120,6 @@ input{
 }
 .todosBoxBody{
   grid-row: 2/3;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .todoItemContainer{
   border: 1px solid #a6a6a7;
@@ -145,11 +142,13 @@ input{
 }
 .todoItemNew{
   max-width: 200px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .todoItem li:hover, .todoItemNew:hover{
   transform: scale(1.02);
   box-shadow: 0 0 11px rgba(33,33,33,.1);
+}
+.hideOverflow{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

@@ -1,4 +1,4 @@
-import { createStore, combineReducers} from 'redux';
+import { createStore, combineReducers } from 'redux';
 import dataR from './reducers/dataR';
 
 const rootReducer = combineReducers({

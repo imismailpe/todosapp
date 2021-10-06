@@ -6,6 +6,7 @@ export const initialState = fromJS({
     error: null
 });
 
+//reducer
 export const dataR = (state = initialState, action = {}) => {
     switch(action.type){
         case actions.UPDATE_TODOS:

@@ -6,7 +6,7 @@ import { setTodos } from '../store/actions/actions';
 
 const ToDos = () => {
     //list of statuses for tasks
-    const statuses = ['Pending', 'Abandoned', 'Completed', 'InProgress'];
+    const statuses = ['Pending', 'Abandoned', 'InProgress', 'Completed'];
     const dispatch = useDispatch();
     const dataStore = useSelector(state => state.dataR.toJS());
     const [todosData, settodosData] = useState(dataStore.todosList);

@@ -91,11 +91,11 @@ const ToDos = () => {
                 <input onChange={handleFilterInputChange} value={filterInput} type="text" name="searchtodo" className="searchtodo" id="searchtodo" placeholder="Filter a task" />
             </form>
             <hr />
-            <ul className="mainList" id="todoList">Today's Tasks:
+            <ol className="mainList" id="todoList" onDrop={e => handleOnDrop(e, '')} onDragOver={handleDragOver}>Today's Tasks:
                 {
-                    dataStore.todosList.filter(item => item.status === '').map(item => <div onDragStart={e => handleDragStart(e, item.id)} className='todoItemNew' key={item.id} draggable='true'><div>{item.text}</div></div>)
+                    dataStore.todosList.filter(item => item.status === '').map(item => <div onDragStart={e => handleDragStart(e, item.id)} className='todoItemNew' key={item.id} draggable='true'><li>{item.text}</li></div>)
                 }
-            </ul>
+            </ol>
             <hr />
             <div className='todoboxContainer'>
                 {

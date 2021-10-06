@@ -120,6 +120,9 @@ input{
 }
 .todosBoxBody{
   grid-row: 2/3;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .todoItemContainer{
   border: 1px solid #a6a6a7;
@@ -131,7 +134,7 @@ input{
   cursor: grab;
 }
 .todoItem li, .todoItemNew{
-	border-radius: 4px;
+  list-style-position: inside;
 	margin: 5px;
 	padding: 5px;
   cursor: grab;
@@ -139,6 +142,12 @@ input{
   border-radius: 3px 3px 9px 3px;
   border: 1px solid #a6a6a7;
   background-color: rgba(250, 250, 250, 0.5);
+}
+.todoItemNew{
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .todoItem li:hover, .todoItemNew:hover{
   transform: scale(1.02);

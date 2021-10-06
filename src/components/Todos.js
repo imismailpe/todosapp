@@ -93,7 +93,7 @@ const ToDos = () => {
             <hr />
             <ol className="mainList" id="todoList" onDrop={e => handleOnDrop(e, '')} onDragOver={handleDragOver}>Today's Tasks:
                 {
-                    dataStore.todosList.filter(item => item.status === '').map(item => <div onDragStart={e => handleDragStart(e, item.id)} className='todoItemNew hideOverflow' key={item.id} draggable='true'><li>{item.text}</li></div>)
+                    dataStore.todosList.filter(item => item.status === '').map(item => <div onDragStart={e => handleDragStart(e, item.id)} className='todoItemNew' key={item.id} draggable='true'><li className='hideOverflow'>{item.text}</li></div>)
                 }
             </ol>
             <hr />

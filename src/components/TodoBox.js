@@ -7,7 +7,7 @@ const TodoBox = (props) => {
             <div className='todosBoxTitle'>{props.status}</div>
             <div className='todosBoxBody hideOverflow'>
                 {
-                    props.data.map(item => <div onDragStart={e => props.onDragStart(e,item.id)} className='todoItem todoItemContainer_' key={item.id} draggable='true'><li>{item.text}</li></div>)
+                    props.data.map(item => <div onDragStart={e => props.onDragStart(e,item.id)} className='todoItem' key={item.id} draggable='true'><li className='hideOverflow'>{item.text}</li></div>)
                 }
             </div>
         </div>

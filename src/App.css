@@ -101,13 +101,13 @@ input{
   box-shadow: 2px 2px 2px #a6a6a7;
 }
 .yellowBox{
-  background-color: rgb(305,299,177);
+  background-color: rgb(255, 254, 198);
 }
 .redBox{
-  background-color: rgb(255 182 182);
+  background-color: rgb(255, 217, 217);
 }
 .greenBox{
-  background-color: rgb(193 255 177);
+  background-color: rgb(219, 255, 177);
 }
 .whiteBox{
   background-color: rgb(255,255,255);
@@ -138,7 +138,9 @@ input{
   text-align: left;
   border-radius: 3px 3px 9px 3px;
   border: 1px solid #414141;
-  background-color: rgba(250, 250, 250, 0.5);
+  background-color: rgb(70 69 69 / 70%);
+  color: #fff;
+  text-shadow: 1px 0 #414141;
 }
 .todoItemNew{
   max-width: 200px;
